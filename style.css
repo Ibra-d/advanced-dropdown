@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  gap: 1rem;
+  background-color: aliceblue;
+  padding: 0.5em;
+}
+
+body {
+  margin: 0;
+}
+
+.link:hover {
+  color: rgba(0, 0, 0, 0.459);
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-menu.active > .dropdown-content {
+  translate: 0 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content:nth-child(2) {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 7em);
+  gap: 1em;
+  position: absolute;
+  top: calc(100% + 1em);
+  left: 0;
+  padding: 0.5em;
+  translate: 0 3em;
+  transition: 200ms;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  color: black;
+}
